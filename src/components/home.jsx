@@ -16,7 +16,7 @@ return (
     </div>
     <div class="flex items-center">
       <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
+        <p class="text-gray-900 leading-none">Jonathan Reininksadsad</p>
         <p class="text-gray-600">Aug 18</p>
       </div>
     </div>
