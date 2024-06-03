@@ -9,20 +9,22 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (  
     <Router>
-     <div className="flex flex-col min-h-screen bg-gray-100">
-      <header>
-        <MyComponent />
-      </header>
-      <main className="flex-grow">
-        <Routes>
-            <Route path="/" element={<Home />} />
+      <div className="flex flex-col min-h-screen bg-gray-100">
+        <header>
+          <MyComponent />
+        </header>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Contenido />} />
             <Route path="/component" element={<Component />} />
             <Route path="/contenido" element={<Contenido />} />
             {/* Agrega más rutas según sea necesario */}
           </Routes>
-      </main>
-      <FooterC />
-    </div> 
+        </main>
+        <footer>
+          <FooterC />
+        </footer>
+      </div>
     </Router>
   );
 }

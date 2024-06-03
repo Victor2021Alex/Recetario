@@ -11,11 +11,11 @@ import pastelMousse from '../assets/imagenes/PastelMousse.jpg';
 export default function Component() {
   const products = [
     { id: 1, name: "Torta", description: "Elegant and comfortable", image: torta },
-    { id: 2, name: "Tarta de queso", description: "Fashion statement", image: tarta },
-    { id: 3, name: "Cafe", description: "Crystal clear audio", image: cafe },
-    { id: 4, name: "Crema de chocolate", description: "Elegant and comfortable", image: crema },
-    { id: 5, name: "Pastel de fresas", description: "Fashion statement", image: pastel },
-    { id: 6, name: "Pastel de Mousse", description: "Crystal clear audio", image: pastelMousse},
+    { id: 2, name: "Tarta de queso", description: "Tarta de queso", image: tarta },
+    { id: 3, name: "Cafe", description: "Cafe", image: cafe },
+    { id: 4, name: "Crema de chocolate", description: "Crema de chocolate", image: crema },
+    { id: 5, name: "Pastel de fresas", description: "Pastel de fresas", image: pastel },
+    { id: 6, name: "Pastel de Mousse", description: "Pastel de Mousse", image: pastelMousse},
   ];
 
   return (
@@ -26,7 +26,7 @@ export default function Component() {
             <span className="sr-only">View</span>
           </Link>
           <a
-            href="#"
+            
             className="absolute top-3 left-3 z-20 bg-white/50 hover:bg-white/80 dark:bg-gray-950/50 dark:hover:bg-gray-950/80 rounded-full transition-colors p-2"
           >
             <HeartIcon />
@@ -35,12 +35,14 @@ export default function Component() {
           <div className="bg-white p-4 dark:bg-gray-950">
             <h3 className="font-bold text-xl">{product.name}</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">{product.description}</p>
-            <a
-              href="#"
-              className="mt-4 py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-            >
-              View Product
-            </a>
+            <div className="flex justify-center mt-4">
+              <a
+                href="#"
+                className="py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              >
+                View Product
+              </a>
+            </div>
           </div>
         </div>
       ))}
