@@ -10,16 +10,16 @@ export default function MyComponent() {
           <span>Recetario</span>
         </Link>
         <nav className="hidden md:flex gap-6 text-[#666] font-medium">
-          <Link to="/component" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
+          <Link to="/contenido" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
             Inicio
           </Link>
-          <Link to="/contenido" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
+          <Link to="/component" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
             Comida casera
           </Link>
-          <Link to="/component" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
+          <Link to="/contenido" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
             Postres
           </Link>
-          <Link to="/contenido" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
+          <Link to="/component" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
             Comida rapida
           </Link>
         </nav>

@@ -6,7 +6,7 @@ import cafe from '../assets/imagenes/Cafe.jpg';
 import crema from '../assets/imagenes/CremaDeChocolate.jpg';
 import pastel from '../assets/imagenes/Pastel de fresas.jpg';
 import pastelMousse from '../assets/imagenes/PastelMousse.jpg';
-
+import MyBook from './ui/MyBook'; // Importa el componente MyBook
 
 export default function Component() {
   const products = [
@@ -15,37 +15,38 @@ export default function Component() {
     { id: 3, name: "Cafe", description: "Cafe", image: cafe },
     { id: 4, name: "Crema de chocolate", description: "Crema de chocolate", image: crema },
     { id: 5, name: "Pastel de fresas", description: "Pastel de fresas", image: pastel },
-    { id: 6, name: "Pastel de Mousse", description: "Pastel de Mousse", image: pastelMousse},
+    { id: 6, name: "Pastel de Mousse", description: "Pastel de Mousse", image: pastelMousse },
   ];
 
   return (
-    <div className="grid grid-cols-3 grid-rows-2 gap-6 max-w-6xl mx-auto p-4 md:p-6">
-      {products.map(product => (
-        <div key={product.id} className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
-          <Link to="#" className="absolute inset-0 z-10" prefetch={false}>
-            <span className="sr-only">View</span>
-          </Link>
-          <a
-            
-            className="absolute top-3 left-3 z-20 bg-white/50 hover:bg-white/80 dark:bg-gray-950/50 dark:hover:bg-gray-950/80 rounded-full transition-colors p-2"
-          >
-            <HeartIcon />
-          </a>
-          <img src={product.image} alt={product.name} width={500} height={400} className="object-cover w-full h-64" />
-          <div className="bg-white p-4 dark:bg-gray-950">
-            <h3 className="font-bold text-xl">{product.name}</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">{product.description}</p>
-            <div className="flex justify-center mt-4">
-              <a
-                href="#"
-                className="py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
-              >
-                View Product
-              </a>
+    <div>
+      <main>
+        {/* Estilo de libro */}
+        <MyBook pages={products.map(product => ({ image: product.image }))} />
+      </main>
+      {/* Renderizado de los productos */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto p-4 md:p-6">
+        {products.map(product => (
+          <div key={product.id} className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
+            <Link to="#" className="absolute inset-0 z-10" prefetch={false}>
+              <span className="sr-only">View</span>
+            </Link>
+            <a className="absolute top-3 left-3 z-20 bg-white/50 hover:bg-white/80 dark:bg-gray-950/50 dark:hover:bg-gray-950/80 rounded-full transition-colors p-2">
+              <HeartIcon />
+            </a>
+            <img src={product.image} alt={product.name} width={500} height={400} className="object-cover w-full h-64" />
+            <div className="bg-white p-4 dark:bg-gray-950">
+              <h3 className="font-bold text-xl">{product.name}</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">{product.description}</p>
+              <div className="flex justify-center mt-4">
+                <a href="#" className="py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                  View Product
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

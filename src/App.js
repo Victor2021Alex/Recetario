@@ -1,7 +1,6 @@
 import './App.css';
 import MyComponent from "./components/headerComponent";
 import FooterC from "./components/footerComponent";
-import Home from "./components/home";
 import Component from './components/component';
 import Contenido from './components/contenido';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
