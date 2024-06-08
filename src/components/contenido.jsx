@@ -40,7 +40,7 @@ export default function Component() {
               <p className="text-sm text-gray-500 dark:text-gray-400">{product.description}</p>
               <div className="flex justify-center mt-4">
                 <a href="#" className="py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
-                  View Product
+                  Ver
                 </a>
               </div>
             </div>
