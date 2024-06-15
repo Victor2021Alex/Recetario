@@ -20,11 +20,13 @@ export default function Component() {
 
   return (
     <div>
+      <p class="text-center text-2xl font-bold mt-6 mb-4 text-orange-600">RECETAS DESTACADAS</p>
       <main>
         {/* Estilo de libro */}
         <MyBook pages={products.map(product => ({ image: product.image }))} />
       </main>
       {/* Renderizado de los productos */}
+      <p class="text-center text-2xl font-bold mt-6 mb-4 text-orange-600" >RECETAS FAVORITAS</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto p-4 md:p-6">
         {products.map(product => (
           <div key={product.id} className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
