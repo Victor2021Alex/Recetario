@@ -19,7 +19,7 @@ export default function MyComponent() {
           <Link to="/contenido" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
             Postres
           </Link>
-          <Link to="/component" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
+          <Link to="/comidaRapida" className="hover:text-[#E67E22] transition-colors" prefetch={false}>
             Comida rapida
           </Link>
         </nav>
